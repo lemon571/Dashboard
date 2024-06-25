@@ -1,0 +1,274 @@
+{
+  "psu": [
+    {
+      "id": "PSU_Slot1",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "PSU_Slot2",
+      "state": "Absent",
+      "health": "NA"
+    }
+  ],
+  "cpu": [
+    {
+      "id": "DevType1_CPU0",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "DevType1_CPU1",
+      "state": "Enabled",
+      "health": "Critical"
+    }
+  ],
+  "memory": [
+    {
+      "id": "DevType2_DIMM16",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "DevType2_DIMM23",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM9",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM7",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM15",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM8",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM20",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM3",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM21",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM4",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM17",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM13",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM1",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM18",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM12",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM5",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM14",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM11",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM0",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM6",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM19"
+    },
+    {
+      "id": "DevType2_DIMM22",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM10",
+      "state": "Enabled"
+    },
+    {
+      "id": "DevType2_DIMM2",
+      "state": "Enabled"
+    }
+  ],
+  "baseboard": [
+    {
+      "id": "Manager",
+      "state": "Enabled",
+      "health": "Warning"
+    }
+  ],
+  "network_interface": [
+    {
+      "id": "usb0",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "eth1",
+      "state": "NA",
+      "health": "NA"
+    },
+    {
+      "id": "eth0",
+      "state": "Enabled",
+      "health": "OK"
+    }
+  ],
+  "fans": [
+    {
+      "id": "Fan_PSU1",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan3_CPU1_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan7_CPU2_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan4_CPU1_Out",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan7_CPU2_Out",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan1_CPU1_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan4_CPU1_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan5_CPU2_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan3_CPU1_Out",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan8_CPU2_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan8_CPU2_Out",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan6_CPU2_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan5_CPU2_Out",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan2_CPU1_Out",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan2_CPU1_In",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan1_CPU1_Out",
+      "state": "Absent",
+      "health": "NA"
+    },
+    {
+      "id": "Fan_PSU2",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "Fan6_CPU2_Out",
+      "state": "Absent",
+      "health": "NA"
+    }
+  ],
+  "storage_drives": [
+    {
+      "id": "USB_Device1_PortA",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "USB_Device2_PortA",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "USB_Device0_PortA",
+      "state": "Enabled",
+      "health": "OK"
+    }
+  ],
+  "storage_controller": [
+    {
+      "id": "SATA_Controller_0",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "USB_Controller1",
+      "state": "Enabled",
+      "health": "OK"
+    },
+    {
+      "id": "SATA_Controller_2",
+      "state": "Enabled",
+      "health": "OK"
+    }
+  ]
+}

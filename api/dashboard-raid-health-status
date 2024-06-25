@@ -1,0 +1,23 @@
+[
+  {
+    "CtrlID": 257,
+    "LDOptimalCount": 1,
+    "LDCriticalCount": 0,
+    "LDOfflineCount": 0,
+    "Reserved": 0,
+    "PDOptimalCount": 5,
+    "PDPredFailCount": 0,
+    "PDFailedCount": 3,
+    "BBUPresent": 0,
+    "BBU_packMissing": 0,
+    "BBU_voltageLow": 0,
+    "BBU_temperatureHigh": 0,
+    "BBU_reserved": 0,
+    "NVRAMUnCorrectableErrorCount": 0,
+    "Status": 0,
+    "CtrlHealthStatus": 0,
+    "LDWarningCount": 0,
+    "PDWarningCount": 0,
+    "PDCriticalCount": 0
+  }
+]

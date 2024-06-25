@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "timestamp": 1490680538,
+    "hostname": "localhost",
+    "message": "kernel: kernel - - [    7.820000] Helper Module Driver Version 1.2 - "
+  },
+  {
+    "id": 2,
+    "timestamp": 1490680538,
+    "hostname": "localhost",
+    "message": "kernel: kernel - - [    7.820000] Copyright (c) 2009-2015 American Megatrends Inc. - "
+  }
+]

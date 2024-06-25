@@ -1,0 +1,56 @@
+    <div class="header"><%=locale.t("common:brand")%></div>
+    <form action="javascript://" id="login_form">
+        <div class="body bg-gray">
+            <div class="form-group">
+                <input type="text" id="userid" class="form-control" placeholder="<%=locale.t("common:username")%>"/>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" class="form-control" placeholder="<%=locale.t("common:password")%>"/>
+            </div>          
+            <div class="form-group">
+                <select id="select_lang" class="form-control">
+                    <option id="en-US" value="en-US"><%=locale.t("common:language_english")%></option>
+                    <option id="zh-CN" value="zh-CN"><%=locale.t("common:language_chinese_simplified")%></option>
+                    <option id="zh-TW" value="zh-TW"><%=locale.t("common:language_chinese_traditional")%></option>
+                </select>
+            </div>
+            
+            
+
+            <div class="form-group">
+                <input id="remember_me" type="checkbox" name="remember_me"/> <%=locale.t("common:rememberme")%>
+            </div>
+        </div>
+        <div class="footer">                                                               
+            <button id="btn-login" class="btn bg-olive btn-block"><%=locale.t("common:signmein")%></button><p><a href="javascript://" id="forgot-password"><%=locale.t("common:forgotpassword")%></a></p>            
+        </div>
+    </form>
+    <form action="javascript://" id="otp_form" class="hide">
+        <div class="body bg-gray">
+           <div class="form-group">
+              <div class="login_otp" role="alert"><%=locale.t("common:login_otp_validation_message")%></div>
+              <label for="otp"><%=locale.t("common:login_otp_field_name")%></label>
+              <input type="password" maxlength="8" class="form-control" id="idotp" value="" placeholder="">
+          </div>
+        </div>
+        <div class="footer">                                                               
+            <button id="otp_submit" class="btn bg-olive btn-block"><%=locale.t("common:login_otp_password_submit_button_name")%></button>   
+           <!-- <p><a href="javascript://" id="resend_otp">Resend OTP</a></p>  -->
+        </div>
+    </form>
+    <form action="javascript://" id="change_password_form" class="hide">
+        <div class="body bg-gray">
+            <div class="form-group">
+                <div class="login_otp" id="change_password_info" role="alert"><%=locale.t("common:forgot_password_info_content")%>
+                </div>
+                <input type="password" id="newpswd" maxlength="16" class="form-control" placeholder="<%=locale.t("common:new_password")%>">
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirmpswd" maxlength="16" class="form-control" placeholder="<%=locale.t("common:confirm_password")%>">
+            </div>          
+            
+        </div>
+        <div class="footer">                                                               
+            <button id="idnewpswd_submit" class="btn bg-olive btn-block"><%=locale.t("common:login_otp_password_submit_button_name")%></button>       
+        </div>
+    </form>

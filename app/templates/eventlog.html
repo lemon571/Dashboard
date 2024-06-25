@@ -1,0 +1,117 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%=locale.t("common:eventlog")%>
+            <small><%=locale.t("common:allsensor_eventlog")%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%=locale.t("common:home")%></a>
+        </li>
+        <li class="active">
+            <%=locale.t("common:eventlog")%>
+        </li>
+    </ol>
+        <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+       <div class="alert alert-info help-item hide" role="alert"><%= locale.t("common:eventlog_hlp") %>
+                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger hide"><b></b></div>
+            <div class="graph-filters filters">
+                <!-- 
+                <div class="input-group" id="filter">
+                    <input type="text" class="form-control" placeholder="<%=locale.t("common:search_filterevent")%>" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon-search glyphicon"></span>
+                    </span>
+                </div> -->
+                <form class="form-inline" role="form" action="javascript://">
+                    <div class="form-group">
+                        <label for="iddate_range_begin"><%=locale.t("common:filter_bydate")%> </label>
+                        <div class='input-group date' id='iddate_range_begin' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" readonly="readonly" placeholder="<%=locale.t("common:start_date")%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class='input-group date' id='iddate_range_end' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" readonly="readonly" placeholder="<%=locale.t("common:end_date")%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="idevent_type">&nbsp;&nbsp;&nbsp;<%=locale.t("common:filter_bytype")%> </label>
+                        <select class="form-control" id="idevent_type">
+                            <option value=""><%=locale.t("common:allevents")%></option>
+                            <option value="system_event_record"><%=locale.t("common:system_events")%></option>
+                            <!-- //nick20190522 SEL log for WEB Unknown name issue start  -->
+                            <!--<option value="oem_record"><%=locale.t("common:oem_events")%></option>-->
+                            <!-- //nick20190522 SEL log for WEB Unknown name issue end  -->
+                            <option value="bios"><%=locale.t("common:bios_events")%></option>
+                            <option value="smi_handler"><%=locale.t("common:smi_events")%></option>
+                            <option value="system_management_software"><%=locale.t("common:system_management_events")%></option>
+                            <option value="system_software_oem"><%=locale.t("common:system_oem_events")%></option>
+                            <option value="remote_console_software"><%=locale.t("common:remove_console_events")%></option>
+                            <option value="terminal_mode_remote_console_software"><%=locale.t("common:terminal_mode_events")%></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="idsensor"><%=locale.t("common:sensor")%></label>
+                        <select class="form-control" id="idsensor">
+                            <option value=""><%=locale.t("common:allsensors")%></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="idseverity">Severity</label>
+                        <select class="form-control" id="idseverity">
+                            <option value="">All Severities</option>
+                            <option value="ok">Ok</option>
+                            <option value="warning">Warning</option>
+                            <option value="critical">Critical</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="row row_eventlog">
+                    <div>
+                        <label for="UTCOffset" ><%= locale.t("common:UTCOffset") %></label>
+                        <label for="UTCOffset" id="idUTCOffset" ></label>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-danger" id="idcl_log"><i class="fa fa-trash-o"></i>  <%=locale.t("common:clear_sel")%></button>
+                        <button  type="button" class="btn btn-success" id="idsave_log" data-feature="SAVE_SELLOG"><i class="fa fa-download"></i><%=locale.t("common:save_sel")%></button>
+                    </div>
+                    <a href="#" target="_blank" id="downloadLink" download="SELLog" class="hide"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-12 loglength" id="eventlength">
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <table class="eventlog-table">
+                <thead>
+                    <th></th>
+                    <th class="eventlog-thead">ID</th>
+                    <th>Sensor</th>
+                    <th class="eventlog-thead">Type</th>
+                    <th>Time</th>
+                </thead>
+                <tbody class="eventlogs" id="event-content">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

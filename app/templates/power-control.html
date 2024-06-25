@@ -1,0 +1,88 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%= locale.t("power_control:power_control") %>
+        <small><%= locale.t("power_control:tag") %></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%= locale.t("power_control:home") %></a>
+        </li>
+        <li class="active">
+            <%= locale.t("power_control:power_control") %>
+        </li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--     
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="Search settings" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="col-md-5">
+        <div class="box box-primary animated fadeInUp">
+            <div class="box-header">
+                <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+                <h3 class="box-title"><%= locale.t("power_control:power_actions") %></h3>
+            </div>
+            <div class="box-body">
+				<div class="alert alert-success hide"><b></b> </div>
+                <div class="alert alert-danger hide"><b></b></div>
+				<div id="chassis_status"></div></br>
+                <form action="javascript://" method="POST" role="form">
+                    <div class="form-group">
+                        <div class="alert alert-info help-item hide" role="alert"><%= locale.t("power_control:help_power_off") %>
+                        </div>
+                        <label>
+                            <input type='radio' value='0' name='power_command' id='idpower_off_command'> <%= locale.t("power_control:power_off") %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert"><%= locale.t("power_control:help_power_on") %></div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type='radio' value='1' name='power_command' id='idpower_on_command'> <%= locale.t("power_control:power_on") %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert"><%= locale.t("power_control:help_power_cycle") %></div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type='radio' value='2' name='power_command' id='idpower_cycle_command'> <%= locale.t("power_control:power_cycle") %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert"><%= locale.t("power_control:help_hard_reset") %></div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type='radio' value='3' name='power_command' id='idpower_reset_command'> <%= locale.t("power_control:hard_reset") %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert"><%= locale.t("power_control:help_acpi_shutdown") %></div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type='radio' value='5' name='power_command' id='idpower_acpi_command'> <%= locale.t("power_control:acpi_shutdown") %>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type='radio' value='6' name='power_command' id='idpower_nmi_command'> <%= locale.t("power_control:nmi_interrupt") %>
+                        </label>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-power-off"></i> &nbsp; <%= locale.t("power_control:perform_action") %></button>
+                    </div> 
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

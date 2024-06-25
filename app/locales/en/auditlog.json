@@ -1,0 +1,12 @@
+{
+    "title": "Audit Log",
+    "home": "Home",
+    "allauditlog": "All audit logs",
+    "filterevent" : "Search or filter events",
+    "startdate" : "Start Date",
+    "enddate" : "End Date",
+    "filterby_date" : "Filter by Date",
+    "audit_hlp":"This page displays audit events for this device (if configured).<br/><strong>NOTE:</strong> For configuration, go to 'Settings -> Log Settings ->Advanced Log Settings'. ",
+    "clear_log":"Clear log",
+    "download": "Download"
+}

@@ -1,0 +1,91 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%=locale.t("auditlog:title")%>
+            <small><%=locale.t("auditlog:allauditlog")%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.t("auditlog:home")%></a>
+        </li>
+        <li class="active">
+            <%=locale.t("auditlog:title")%>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="alert alert-info help-item hide" role="alert"><%= locale.t("auditlog:audit_hlp") %>
+                </div>
+            </div>
+            <div class="alert alert-danger hide"><b></b></div>
+            <div class="graph-filters filters">
+                <!-- 
+                <div class="input-group" id="filter">
+                    <input type="text" class="form-control" placeholder="<%=locale.t("auditlog:filterevent")%>" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon-search glyphicon"></span>
+                    </span>
+                </div> -->
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="iddate_range_begin"><%=locale.t("auditlog:filterby_date")%></label>
+                        <div class='input-group date' id='iddate_range_begin' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" readonly="readonly" placeholder="<%=locale.t("auditlog:startdate")%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="iddate_range_end">-</label>
+                        <div class='input-group date' id='iddate_range_end' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" readonly="readonly" placeholder="<%=locale.t("auditlog:enddate")%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="idseverity">Severity</label>
+                        <select class="form-control" id="idseverity">
+                            <option value="">All Severities</option>
+                            <option value="ok">Ok</option>
+                            <option value="warning">Warning</option>
+                            <option value="critical">Critical</option>
+                        </select>
+                    </div>
+                    <div class="col pull-right">
+                        <button id="audit-download" type="button" class="btn btn-success"><%=locale.t("auditlog:download")%></button>
+                        <button id="audit-clear-log" type="button" class="btn btn-danger"><%=locale.t("auditlog:clear_log")%></button>
+                    <div>
+                    <a href="#" target="_blank" id="download-audit-log" download="audit.log" class="hide"></a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row">
+            <div class="col loglength" id="audit_entries"></div>
+        </div>
+
+        <div class="row logscroll_row">
+            <div class="event-height">
+                <div class="col-lg-12">
+                    <ul class="timeline" id="event-content">
+                        <li class='timeline-item-finish'>
+                            <i class="fa fa-clock-o animated fadeInDown"></i>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

@@ -1,0 +1,14 @@
+{
+    "home": "Home",
+    "sensor_reading": " Sensor Reading",
+    "sensor_details": "Sensor detail",
+    "allinfo": "All information about this sensor",
+    "search_sensors": "Search Sensor Detail",
+    "sensor_name": "Sensor Name",
+    "sensor_information": "Sensor Information",
+    "sensor_events": "Sensor Events",
+    "state": "State",
+    "behavior": "Behavior",
+    "no_events": "No events found for this sensor!",
+    "page_desc": "<div><div id='nondiscretesensor'><b>Sensor Information</b><br>The graph is a dynamic representation of the Sensor readings.<br><div data-feature='SET_SENSOR_THRESHOLDS'><b>Change Thresholds (if supported) </b><br>Click ‘Change Thresholds’ to configure threshold settings. Enter the desired threshold values.<br><strong>Note:</strong> The threshold settings button will be enabled only for administrator or operator privilege users. For other users, the option will be disabled. And if all threshold value are not settable or not readable, it will be disabled.</div></div><b>Sensor Events</b><br>This section displays all the event entries for this sensor in a reverse chronological order.</div>"
+}

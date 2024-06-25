@@ -1,0 +1,62 @@
+[
+  {
+    "name": "MT27800 Family [ConnectX-5]",
+    "channel_0": {
+      "mac": "B8:59:9F:4C:3D:50",
+      "link": 0,
+      "speed": 0
+    },
+    "channel_1": {
+      "mac": "B8:59:9F:4C:3D:51",
+      "link": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "BCM57414 NetXtreme-E 10Gb/25Gb RDMA Ethernet Controller",
+    "channel_0": {
+      "mac": "5C:6F:69:B9:26:60",
+      "link": 0,
+      "speed": 0
+    },
+    "channel_1": {
+      "mac": "5C:6F:69:B9:26:61",
+      "link": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "BCM57414 NetXtreme-E 10Gb/25Gb RDMA Ethernet Controller",
+    "channel_0": {
+      "mac": "5C:6F:69:B9:9F:80",
+      "link": 0,
+      "speed": 0
+    },
+    "channel_1": {
+      "mac": "5C:6F:69:B9:9F:81",
+      "link": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "BCM57414 NetXtreme-E 10Gb/25Gb RDMA Ethernet Controller",
+    "channel_0": {
+      "mac": "B0:26:28:29:96:D0",
+      "link": 0,
+      "speed": 0
+    },
+    "channel_1": {
+      "mac": "B0:26:28:29:96:D1",
+      "link": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "I210 Gigabit Network Connection",
+    "channel_0": {
+      "mac": "00:58:3F:FF:A4:48",
+      "link": 1,
+      "speed": 7
+    }
+  }
+]

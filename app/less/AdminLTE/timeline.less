@@ -1,0 +1,223 @@
+/*
+Component: timeline
+--------------------
+*/
+
+.timeline{
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+    
+    // The line 
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        width: 5px;
+        background: #ddd;
+        left: 45px;
+        border: 1px solid #eee;
+        margin: 0;
+        .border-radius(2px);    
+        //.animated;
+        //.fadeInUpBig;    
+    }
+   
+
+    > li {
+        position: relative;
+        // margin-right: 10px;
+        // margin-bottom: 15px;
+
+        .clearfix();
+        
+
+        // > .timeline-item.log-warning {
+        //     background: #ffe79e !important;
+        //     border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+        //     cursor: pointer;
+        // }
+
+        // > .timeline-item.log-emergency,
+        // > .timeline-item.log-alert,
+        // > .timeline-item.log-critical,
+        // > .timeline-item.log-error,
+        // > .timeline-item.log-non-recoverable {
+        //     background: #fb8c8c !important;
+        //     border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+        //     cursor: pointer;
+        // }
+
+        // The content 
+        > .timeline-item {
+            margin-top: 10px;
+            border: 0px solid #dfdfdf;
+            background: #fff;
+            color: #555;
+            // margin-left: 60px;
+            // margin-right: 15px;
+            padding: 5px;
+            position: relative;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);            
+
+
+            // The time and header 
+            > .time {
+                color: #555;
+                float: right;
+                margin: 2px 0 0 0;
+            }
+            > .timeline-header {
+                margin: 0;
+                color: #555;
+                border-bottom: 1px solid #f4f4f4;
+                padding: 5px;
+                font-size: 16px;
+                line-height: 1.1;
+                > a {
+                    font-weight: 600;
+                }
+            }
+            // Item body and footer
+            > .timeline-body, > .timeline-footer {
+                padding: 10px;
+            }
+            
+        }
+
+        // Time label 
+        &.time-label {
+            > span {
+                font-weight: 600;
+                margin-bottom: 15px;
+                padding: 5px;
+                display: inline-block;
+                background-color: #fff;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+                .border-radius(4px);
+            }
+        }
+
+        // The icons 
+        > .fa,
+        > .glyphicon,
+        > .ion {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+            line-height: 30px;
+            position: absolute;
+            color: #666;
+            background: #eee;
+            border-radius: 50%;
+            text-align: center;
+            left: 18px;
+            top: 0;
+            margin: 15px 0 15px 0;
+        }
+
+    }
+
+}
+
+
+
+
+/*
+Component: eventlog
+--------------------
+*/
+
+.eventlog-table{
+    min-width: 100%;
+    border: 0px solid #dfdfdf;
+    background: #fff;
+    color: #555;
+    padding: 5px;
+    position: relative;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+
+    .eventlog-thead {
+        padding: 12px;
+    }
+}
+
+.eventlogs{
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    position: relative;
+
+    .clearfix();
+
+    > td {
+        padding: 10px;
+    }
+
+    // The content
+    > .eventlog-item-holder {
+        border: 0px solid #dfdfdf;
+        background: #fff;
+        color: #555;
+        padding: 5px;
+        position: relative;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+
+        > .eventlog-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        // The time and header
+        > .time {
+            color: #555;
+            margin: 2px 0 0 0;
+        }
+        > .eventlog-header, > .sensor_id {
+            margin: 0;
+            color: #555;
+            padding: 12px;
+            font-size: 16px;
+            line-height: 1.1;
+            > a {
+                font-weight: 600;
+            }
+        }
+        // Item body and footer
+        > .timeline-body, > .timeline-footer {
+            padding: 10px;
+        }
+    }
+
+    // Time label
+    > .time-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    // The icons
+    > .fa,
+    > .glyphicon,
+    > .ion {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        line-height: 30px;
+        position: absolute;
+        color: #666;
+        background: #eee;
+        border-radius: 50%;
+        text-align: center;
+        left: 18px;
+        top: 0;
+        margin: 15px 0 15px 0;
+    }
+}

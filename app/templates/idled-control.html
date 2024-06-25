@@ -1,0 +1,50 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%= locale.t("idled_control:idled_control") %>
+        <small><%= locale.t("idled_control:tag") %></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%= locale.t("idled_control:home") %></a>
+        </li>
+        <li class="active">
+            <%= locale.t("idled_control:idled_control") %>
+        </li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+        <div class="box box-primary animated fadeInUp">
+            <div class="box-header">
+                <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+                <h3 class="box-title"><%= locale.t("idled_control:idled_actions") %></h3>
+            </div>
+            <div class="box-body">
+				<div class="alert alert-success hide"><b></b> </div>
+                <div class="alert alert-danger hide"><b></b></div>
+				<div id="idled_status"></div></br>
+                <form action="javascript://" method="POST" role="form">
+                    <div class="form-group">
+                        <div class="alert alert-info help-item hide" role="alert">Select this option to set ID LED .</div>
+                        <label>
+                            <input type='radio' value='1' name='idled_command' id='ididled_shared_command'> <%= locale.t("idled_control:idledstart") %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert">Select this option to set ID LED Start.</div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type='radio' value='0' name='idled_command' id='ididled_failover_command'> <%= locale.t("idled_control:idledstop") %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert">Select this option to set ID LED Stop.</div>
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-wrench"></i> &nbsp; <%= locale.t("idled_control:perform_action") %></a>
+                    </div> 
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

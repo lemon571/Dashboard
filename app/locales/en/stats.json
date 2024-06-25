@@ -1,0 +1,10 @@
+{
+    "new_scripts": "Available Scripts",
+    "more_info" : "More info ",
+    "power_cycle" : "Power Cycle ",
+    "up_time" : "Power-On Hours",
+    "pending_activities" : "Pending Activities",
+    "pending_assertions" : "Pending Deassertions",
+    "new_audit_issue" : "Access Logs",
+	"automation_engine_is_not_enabled":"Automation Engine is Not Enabled"
+}
