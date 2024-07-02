@@ -8,11 +8,11 @@ define([
     //"views/dashboard/RaidStatusView",
     //"views/dashboard/NicStatusView",
     // Collection
-    //"collection/dashboard/product_information",
+    "collection/dashboard/product_information",
     //"collection/dashboard/raid_controller_status",
     //"collection/dashboard/nic_status",
     // Locales
-    //"i18n!:product_information",
+    "i18n!:system_status",
     // Template HTML
     "text!templates/dashboard/product_information.html",
   ], function (
@@ -23,7 +23,7 @@ define([
     ProductInformationCollectionView,
     //RaidStatusView,
     //NicStatusView,
-    //ProductInformationCollection,
+    ProductInformationCollection,
     //RaidControllerCollection,
     //NicCollection,
     //CommonStrings,
@@ -36,7 +36,13 @@ define([
       initialize: function () {
           this.views = {};
       },
-  ///
+
+      afterRender: function () {
+        var $tbody = this.$("tbody");
+        $tbody.html("");
+        this.RequestComponentStatus($tbody, this);
+      },
+
       RequestComponentStatus: function ($tbody, that) {
         $.ajax({
           url: "/api/dashboard-product",
@@ -44,11 +50,15 @@ define([
           contentType: "application/json",
           success: function (data, status, xhr) {
             $.each(data, function (group, group_models) {
+              if (group_models.length == 0) {
+                return;
+              }
   
               var collection = new ProductInformationCollectionView(group_models);
   
               var view = new ProductInformationCollectionView({
                 collection: collection,
+                group_id: group,
               });
   
               that.views[group] = view;
@@ -67,23 +77,3 @@ define([
   
     return view;
   });
-  
-      /*
-      renderData: function(data, $tbody) {
-      this.model.set({
-        vendor: data.vendor,
-        model: data.model,
-        board_model: data.board_model,
-        server_serial_number: data.server_serial_number,
-        host_name: data.host_name,
-        uuid: data.uuid
-      });
-      this.render();
-      $tbody.append(this.$el);
-    },
-    render: function() {
-      this.$el.html(this.template(this.model.toJSON()));
-      return this;
-    }
-  });
-     */
