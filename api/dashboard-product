@@ -1,0 +1,8 @@
+{
+    "vendor": "ExampleVendor",
+    "model": "ExampleModel",
+    "board_model": "ExampleBoardModel",
+    "server_serial_number": "1234567890",
+    "host_name": "example-hostname",
+    "uuid": "123e4567-e89b-12d3-a456-426614174000"
+}
