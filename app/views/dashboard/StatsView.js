@@ -67,6 +67,10 @@ define(['jquery', 'underscore', 'backbone','app',
                 var stat = new SystemStatusView();
                 console.log("Insert view system-status-info")
                 this.insertView("#system-status-info", stat).render();
+                //ProductInformation
+                var stat = new ProductInformationView();
+                console.log("Insert view product-information-info")
+                this.insertView("#product-information-info", stat).render();
             },
             /*events: {
                  "click #script_more_info": "script_more_info"
