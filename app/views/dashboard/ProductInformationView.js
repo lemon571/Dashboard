@@ -12,7 +12,7 @@ define([
     //"collection/dashboard/raid_controller_status",
     //"collection/dashboard/nic_status",
     // Locales
-    "i18n!:system_status",
+    "i18n!:dashboard",
     // Template HTML
     "text!templates/dashboard/product_information.html",
   ], function (
