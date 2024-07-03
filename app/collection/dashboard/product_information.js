@@ -7,7 +7,7 @@ define([
 ], function ($, _, Backbone, ProductInformationModel) {
   
   var collection = Backbone.Collection.extend({
-    model: ProductInformationModel
+    model: ProductInformationModel,
   });
 
     return collection;

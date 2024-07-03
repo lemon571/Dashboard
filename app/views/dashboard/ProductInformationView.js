@@ -15,6 +15,9 @@ define([
     "i18n!:dashboard",
     // Template HTML
     "text!templates/dashboard/product_information.html",
+    // Model
+    "models/dashboard/product_information"
+    
   ], function (
     $,
     _,
@@ -27,32 +30,50 @@ define([
     //RaidControllerCollection,
     //NicCollection,
     //CommonStrings,
-    ProductInformationTemplate
+    ProductInformationTemplate,
+    ProductInformationModel
   ) {
   
     var view = Backbone.View.extend({
-      tagName: "tr",
-
-      template: template(ProductInformationTemplate),
-      
-      events: {
-        "change": "render"
-      },
+      el: "#table-product-information tbody",
 
       initialize: function () {
-        this.view = {};
-        this.view.model = this.model;
-        this.view.model.on("change", this.render, this);
-      },
 
-      render: function () {
-        this.$el.html(this.template({
-          title: this.view.model.get("title"),
-          value: this.view.model.get("value")
-        }));
-        return this;
-      },
-    });
+        this.model = new ProductInformationModel();
+        
+        this.listenTo(this.model, 'change', this.render);
+        this.model.fetchData();
+    },
+
+    render: function() {
+      var data = this.model.toJSON();
+      for (var key in data) {
+        if (data.hasOwnProperty(key)) {
+          this.$('#' + key).text(data[key]);
+        }
+      }
+
+      return this;
+    },
+
+    fetchData: function () {
+      $.ajax({
+        url: "api/dashboard-product",
+        type: "GET",
+        success: function (data) {
+          this.collection.reset(
+            _.map(data, function (item) {
+              return { 
+                title: item.title, 
+                value: item.value 
+              };
+            })
+          );
+          this.render();
+        }.bind(this)
+      });
+    }
+  });
   
     return view;
 });
