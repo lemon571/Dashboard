@@ -31,49 +31,28 @@ define([
   ) {
   
     var view = Backbone.View.extend({
+      tagName: "tr",
+
       template: template(ProductInformationTemplate),
-  
-      initialize: function () {
-          this.views = {};
-      },
-
-      afterRender: function () {
-        var $tbody = this.$("tbody");
-        $tbody.html("");
-        this.RequestComponentStatus($tbody, this);
-      },
-
-      RequestComponentStatus: function ($tbody, that) {
-        $.ajax({
-          url: "/api/dashboard-product",
-          type: "GET",
-          contentType: "application/json",
-          success: function (data, status, xhr) {
-            $.each(data, function (group, group_models) {
-              if (group_models.length == 0) {
-                return;
-              }
-  
-              var collection = new ProductInformationCollectionView(group_models);
-  
-              var view = new ProductInformationCollectionView({
-                collection: collection,
-                group_id: group,
-              });
-  
-              that.views[group] = view;
-  
-              that.RenderComponentsGroup(view, $tbody);
-            });
-          },
-        });
-      },
       
-      RenderComponentsGroup: function (view, $tbody) {
-        $tbody.append(view.$el);
-        view.render();
+      events: {
+        "change": "render"
+      },
+
+      initialize: function () {
+        this.view = {};
+        this.view.model = this.model;
+        this.view.model.on("change", this.render, this);
+      },
+
+      render: function () {
+        this.$el.html(this.template({
+          title: this.view.model.get("title"),
+          value: this.view.model.get("value")
+        }));
+        return this;
       },
     });
   
     return view;
-  });
+});
