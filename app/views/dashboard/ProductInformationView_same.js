@@ -42,28 +42,27 @@ define([
             url: "/api/dashboard-product",
             type: "GET",
             contentType: "application/json",
-            success: function (data, status, xhr) {
+            success: function (data) {
                 $.each(data, function (group, group_models) {
-                if (group_models.length == 0) {
+                  if (group_models.length == 0) {
                     return;
-                }
-
-                if (group in that.views) {
+                  }
+      
+                  if (group in that.views) {
                     that.views[group].Refresh(group_models);
-
+      
                     return;
-                }
+                  }
+                  var collection = new ProductInformationCollection(group_models);
 
-                var collection = new ProductInformationCollection(group_models);
-
-                var view = new ProductInformationCollectionView({
+                  var view = new ProductInformationCollectionView({
                     collection: collection,
                     group_id: group,
-                });
-
-                that.views[group] = view;
-
-                that.RenderComponentsGroup(view, $tbody);
+                  });
+      
+                  that.views[group] = view;
+      
+                  that.RenderComponentsGroup(view, $tbody);
                 });
             },
         });
