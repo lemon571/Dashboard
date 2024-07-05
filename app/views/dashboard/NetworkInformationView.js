@@ -6,7 +6,7 @@ define([
   // Collection
   //"collection/dashboard/network_info",
   // Template HTML
-  "text!templates/dashboard/network_info.html"
+  "text!templates/dashboard/network_information.html"
 ], function (
   $,
   _,

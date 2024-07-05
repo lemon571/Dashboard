@@ -3,7 +3,7 @@ define([
     "underscore",
     "backbone",
     // Models
-    "models/dashboard/network_info"
+    "models/dashboard/network_information"
 ], function($, _, Backbone, NetworkInfoModel) {
     var collection = Backbone.Collection.extend({
         model: NetworkInfoModel
