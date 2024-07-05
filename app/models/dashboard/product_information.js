@@ -1,9 +1,6 @@
-const { Model } = require("backbone");
-
-define(["underscore", "backbone", "i18n!:product_information"], function (
+define(["underscore", "backbone"], function (
     _,
-    Backbone,
-    CommonStrings
+    Backbone
   ) {
     var model = Backbone.Model.extend({
       defaults: {
@@ -12,7 +9,7 @@ define(["underscore", "backbone", "i18n!:product_information"], function (
         board_model: "NA",
         server_serial_number: "NA",
         host_name: "NA",
-        uuid: "NA",
+        uuid: "NA"
       },
   
       Vendor: function () {

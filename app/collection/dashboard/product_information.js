@@ -3,10 +3,11 @@ define([
   "underscore",
   "backbone",
   // Models
-  "models/dashboard/system_status",
+  "models/dashboard/product_information"
 ], function ($, _, Backbone, ProductInformationModel) {
   
   var collection = Backbone.Collection.extend({
+    
     model: ProductInformationModel,
   });
 

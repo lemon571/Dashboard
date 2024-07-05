@@ -1,3 +1,4 @@
+/*
 define([
     "jquery",
     "underscore",
@@ -31,3 +32,4 @@ define([
 
   return view;
 });
+*/
