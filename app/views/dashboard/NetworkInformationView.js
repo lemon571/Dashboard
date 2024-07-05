@@ -4,7 +4,7 @@ define([
   "backbone",
   "app",
   // Collection
-  "collection/dashboard/network_info",
+  //"collection/dashboard/network_info",
   // Template HTML
   "text!templates/dashboard/network_info.html"
 ], function (
@@ -12,7 +12,7 @@ define([
   _,
   Backbone,
   app,
-  NetworkInformationCollection,
+  //NetworkInformationCollection,
   NetworkInformationTemplate
 ) {  
   var view = Backbone.View.extend({
@@ -31,16 +31,16 @@ define([
         url: "api/dashboard-product",
         type: "GET"
       })
-        .done(function(data) {
-          that.$("#mac_address").html(data.mac_address);
-          that.$("#ipv4_network_mode").html(data.ipv4_network_mode);
-          that.$("#ipv4_address").html(data.ipv4_address);
-          that.$("#ipv6_network_mode").html(data.ipv6_network_mode);
-          that.$("#ipv6_address").html(data.ipv6_address);
-        })
-        .fail(function(){
-          console.error("Error network_info");
-        });
+      .done(function(data) {
+        that.$("#mac_address").html(data.mac_address);
+        that.$("#ipv4_network_mode").html(data.ipv4_network_mode);
+        that.$("#ipv4_address").html(data.ipv4_address);
+        that.$("#ipv6_network_mode").html(data.ipv6_network_mode);
+        that.$("#ipv6_address").html(data.ipv6_address);
+      })
+      .fail(function() {
+        console.error("Error network_info");
+      });
     },
   });
 
