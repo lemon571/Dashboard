@@ -4,11 +4,12 @@ define(['jquery', 'underscore', 'backbone','app',
     'views/dashboard/SystemStatusView',
     'views/dashboard/ProductInformationView',
     'views/dashboard/NetworkInformationView',
+    'views/dashboard/FirmwareInformationView',
     //'collection/scripts',
     'text!templates/dashboard/stats.html',
     'i18n!:stats'
 ],
-function($, _, Backbone, app ,AppConfigModel, UserConfigModel, SystemStatusView, ProductInformationView, NetworkInformationView, StatsTemplate, CommonStrings) {
+function($, _, Backbone, app ,AppConfigModel, UserConfigModel, SystemStatusView, ProductInformationView, NetworkInformationView, FirmwareInformationView, StatsTemplate, CommonStrings) {
 
     var view = Backbone.View.extend({
 
@@ -39,6 +40,9 @@ function($, _, Backbone, app ,AppConfigModel, UserConfigModel, SystemStatusView,
 
             var network = new NetworkInformationView();
             this.insertView("#network-info", network).render();
+
+            var firmware = new FirmwareInformationView();
+            this.insertView("#firmware-information-info", firmware).render();
         },
 
         updateUptime: function(model) {

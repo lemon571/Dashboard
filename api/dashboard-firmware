@@ -1,0 +1,7 @@
+{
+    "bmc_firmware": "Версия прошивки BMC",          
+    "bmc_build_date": "Дата создания прошивки. Параметр Build Date",          
+    "bios_firmware": "Версия прошивки BIOS",          
+    "bios_build_date": "Дата создания прошивки.Параметр Build Date",          
+    "cpld": "Версия прошивки CPLD"
+}

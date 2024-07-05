@@ -17,7 +17,10 @@
     "ipv4_network_mode": "IPv4 Network Mode",
     "ipv4_address": "IPv4 Address",
     "ipv6_network_mode": "IPv6 Network Mode",
-    "ipv6_address": "IPv6 Address"
-
-
+    "ipv6_address": "IPv6 Address",
+    "bmc_firmware": "BMC Firmware",          
+    "bmc_build_date": "BMC Build Date",          
+    "bios_firmware": "BIOS Firmware",          
+    "bios_build_date": "BIOS Build Date",          
+    "cpld": "CPLD"
 }
