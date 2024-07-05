@@ -28,7 +28,7 @@ define([
 
     RequestComponentStatus: function (that) {
       $.ajax({
-        url: "api/dashboard-product",
+        url: "api/dashboard-network",
         type: "GET"
       })
       .done(function(data) {
