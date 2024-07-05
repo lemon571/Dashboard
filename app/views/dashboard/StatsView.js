@@ -38,7 +38,7 @@ function($, _, Backbone, app ,AppConfigModel, UserConfigModel, SystemStatusView,
             this.insertView("#product-information-info", product).render();
 
             var network = new NetworkInformationView();
-            this.insertView("#network-info", network).render();
+            this.insertView("#network-info", network()).render();
         },
 
         updateUptime: function(model) {
