@@ -1,4 +1,3 @@
-/*
 define([
     "jquery",
     "underscore",
@@ -8,28 +7,23 @@ define([
   ], function ($, _, Backbone, CommonStrings) {
 
     var view = Backbone.View.extend({
-      el: '#table-product-information',
-
-      //model: ProductInformationModel,
+      tagName: "tr",
+      
       initialize: function() {
-        this.collection = new ProductInformationCollection();
-        this.collection.fetch();
-        this.render();
+        if(this.group_id == undefined)
+          {
+            this.group_id = "na";
+          }
+    
+          this.UpdateGroupStatus();
       },
       
-      render: function() {
-
-        this.collection.each(function(model) {
-        var view = new ModelView({ 
-          model: model 
-        });
-        view.render();
-      });
       
-      return this;
-    }
+      Refresh: function(models)
+      {
+        this.collection.reset(models);
+      },
   });
 
   return view;
 });
-*/
