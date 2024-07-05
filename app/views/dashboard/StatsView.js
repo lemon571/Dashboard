@@ -3,11 +3,12 @@ define(['jquery', 'underscore', 'backbone','app',
     'models/user_config', // api/settings/user-preference
     'views/dashboard/SystemStatusView',
     'views/dashboard/ProductInformationView',
+    'views/dashboard/NetworkInformationView',
     //'collection/scripts',
     'text!templates/dashboard/stats.html',
     'i18n!:stats'
 ],
-function($, _, Backbone, app ,AppConfigModel, UserConfigModel, SystemStatusView, ProductInformationView, StatsTemplate, CommonStrings) {
+function($, _, Backbone, app ,AppConfigModel, UserConfigModel, SystemStatusView, ProductInformationView, NetworkInformationView, StatsTemplate, CommonStrings) {
 
     var view = Backbone.View.extend({
 

@@ -40,7 +40,7 @@ define([
           that.$("#uuid").html(data.uuid);
         })
         .fail(function() {
-          console.error("Error");
+          console.error("Error product_information");
         });
       },
     });

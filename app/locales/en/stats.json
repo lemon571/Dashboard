@@ -12,5 +12,12 @@
     "board_model": "Board_model",
     "server_serial_number": "Server_serial_number",
     "host_name": "Host_name",
-    "uuid": "Uuid"
+    "uuid": "Uuid",
+    "mac_address": "BMC MAC Addrress",
+    "ipv4_network_mode": "IPv4 Network Mode",
+    "ipv4_address": "IPv4 Address",
+    "ipv6_network_mode": "IPv6 Network Mode",
+    "ipv6_address": "IPv6 Address"
+
+
 }

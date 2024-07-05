@@ -1,0 +1,7 @@
+{
+    "mac_address": "MAC аддресс BMC",
+    "ipv4_network_mode": "Тип сетевой настройки. Допустимые значения DHCP либо Static",
+    "ipv4_address": "IP адресс BMC",
+    "ipv6_network_mode": "Тип сетевой настройки. Допустимые значения DHCP либо Static",
+    "ipv6_address": "IP адресс BMC"
+}
