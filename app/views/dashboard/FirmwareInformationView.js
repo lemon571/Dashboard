@@ -4,10 +4,10 @@ define([
     "backbone",
     "app",
     // Collection
-    //"collection/dashboard/firmware_information",
+    "collection/dashboard/firmware_information",
     // Template HTML
     "text!templates/dashboard/firmware_information.html"
-  ], function (
+],function(
     $,
     _,
     Backbone,
