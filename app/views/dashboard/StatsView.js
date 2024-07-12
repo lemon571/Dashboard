@@ -38,7 +38,7 @@ function($, _, Backbone, app ,AppConfigModel, UserConfigModel,
             this.acm.trigger("change", this.acm, this.acm.get('minutes_per_count'));
             
             var quickbutton = new QuickButtonView3()
-            this.inserView("#quick-button", button).render();
+            this.inserView("#quick-button", quickbutton).render();
             /*var quickbutton1 = new QuickButtonViewPC();
             this.insertView("#pc-button", quickbutton1).render();
 
