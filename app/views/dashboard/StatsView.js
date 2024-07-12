@@ -1,8 +1,9 @@
 define(['jquery', 'underscore', 'backbone','app',
     'models/app_config', // api/status/uptime
     'models/user_config', // api/settings/user-preference
-    'views/dashboard/QuickButtonViewPC',
-    'views/dashboard/QuickButtonViewHVM',
+    //'views/dashboard/QuickButtonViewPC',
+    //'views/dashboard/QuickButtonViewHVM',
+    'views.dashboard/QuickButtonView3',
     'views/dashboard/SystemStatusView',
     'views/dashboard/ProductInformationView',
     'views/dashboard/NetworkInformationView',
@@ -11,7 +12,9 @@ define(['jquery', 'underscore', 'backbone','app',
     'text!templates/dashboard/stats.html',
     'i18n!:stats'
 ],
-function($, _, Backbone, app ,AppConfigModel, UserConfigModel, QuickButtonViewPC, QuickButtonViewHVM, SystemStatusView, ProductInformationView, NetworkInformationView, FirmwareInformationView, StatsTemplate, CommonStrings) {
+function($, _, Backbone, app ,AppConfigModel, UserConfigModel, 
+    //QuickButtonViewPC, QuickButtonViewHVM, 
+    QuickButtonView3, SystemStatusView, ProductInformationView, NetworkInformationView, FirmwareInformationView, StatsTemplate, CommonStrings) {
 
     var view = Backbone.View.extend({
 
@@ -34,12 +37,14 @@ function($, _, Backbone, app ,AppConfigModel, UserConfigModel, QuickButtonViewPC
 
             this.acm.trigger("change", this.acm, this.acm.get('minutes_per_count'));
             
-            var quickbutton1 = new QuickButtonViewPC();
+            var quickbutton = new QuickButtonView3()
+            this.inserView("#quick-button", button).render();
+            /*var quickbutton1 = new QuickButtonViewPC();
             this.insertView("#pc-button", quickbutton1).render();
 
             var quickbutton2 = new QuickButtonViewHVM();
             this.insertView("#hvm-button", quickbutton2).render();
-
+            */
             var stat = new SystemStatusView();
             this.insertView("#system-status-info", stat).render();
 

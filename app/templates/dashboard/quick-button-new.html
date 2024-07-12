@@ -1,0 +1,64 @@
+<div id="quick-button" class="full-width-block">
+    <h2>Quick Button</h2>
+    <body>
+        <div class="button-container">
+            <div>
+                <button id="button-pc" class="button-container split left centered">Power Control</button>
+                <select class="selectpicker" data-style="btn-primary" multiple>
+                    <option>Forced Power</option>
+                    <option>Power On</option>
+                    <option>Power Cycle</option>
+                    <option>ForcedSystem Reset</option>
+                    <option>Trigger NMI</option>
+                    <option>Soft Shutdown</option>
+                </select>
+                <div class="text-right mt-3">
+                    <button class="btn btn-success px-4">
+                        <i class="fa fa-power-off text-white mr-2"></i>
+                        <span>Perform Action</span>
+                    </button>
+                </div>
+            </div>
+            <div id="button-hvm" class="button-container split right centered">
+                <button>HVM</button>
+            </div>
+        </div>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+    <script src="app/views/dashboard/QuickButtonViewHVM.js"></script>
+    <script src="viewhvm.js"></script>
+    <script scr="/home/user/work/webui-light/app/views/dashboard/QuickButtonViewPC.js"></script>
+    
+    <script src="app.js"></script>
+    -->
+    </body>
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .button {
+        width: 50%;
+        height: 50px;
+        font-size: 18px;
+        background-color: white; /*#4CAF50*/
+        color: black;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button button {
+        width: 100%;
+    }
+
+    .button-active {
+        background-color: #4CAF50; 
+        color: #fff;
+    }
+
+</style>
