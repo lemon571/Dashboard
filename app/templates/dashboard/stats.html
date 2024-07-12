@@ -31,9 +31,11 @@
                                     <i class="ion ion-stats-bars"></i>
                                 </div>
                                 <div class="stats_div"></div>
-                                <!--<a href="#power-control" class="small-box-footer">
+                                <!--
+                                <a href="#power-control" class="small-box-footer">
                                     <%=locale.t("stats:power_cycle")%> <i class="fa fa-arrow-circle-right"></i>
-                                </a>-->
+                                </a>
+                            -->
                             </div>
                         </div>
                         <div class="col-lg-6 col-xs-6">
@@ -55,8 +57,12 @@
                                 </a>
                             </div>
                         </div><!-- ./col -->
+                        <!--QuickButton-->
+                        <div clss="col-md-6 col-xs-6">
+                            <div id="pc-button" class="button hidden split left centered"></div>
+                        </div>
                         <div class="col-md-6 col-xs-6">
-                            <div id="system-status-info" class="box box-info"></div>
+                            <div id="hvm-button" class="button hidden split right centered"></div>
                         </div>
                         <!--ProductInformation-->
                         <div class="col-md-6 col-xs-6">
@@ -91,6 +97,13 @@
                             </div>
                            <!-- Small boxes (Stat box) -->
                             <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <div id="quick-button" class="box box-warning">
+                                        <div class="box-header">
+                                            <h3 class="box-title"><%=locale.t("stats:quick-button_title")%></h3>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6 col-xs-6">
                                     <div id="system-status-info" class="box box-info"></div>
                                 </div>

@@ -5,27 +5,82 @@
         <tr>
           <td><%=locale.t("stats:vendor")%></td>
           <td id="vendor"></td>
-        </tr>
-        <tr>
-          <td><%=locale.t("stats:model_product")%></td>
-          <td id="model_product"></td>
+          <td>
+            <label class="btn btn-success btn-circle">
+              <input type="checkbox" autocomplete="off">
+              <i class="fa fa-check-circle fa-lg"></i>
+          </td>
         </tr>
         <tr>
           <td><%=locale.t("stats:board_model")%></td>
           <td id="board_model"></td>
+           <td>
+            <button class="btn btn-success btn-circle btn-sm" onclick="toggleCheckmark(this)">
+              <i class="fa fa-check"></i>
+            </button>
+          </td>
         </tr>
         <tr>
           <td><%=locale.t("stats:server_serial_number")%></td>
           <td id="server_serial_number"></td>
+          <td>
+            <label class="btn btn-success btn-circle btn-sm">
+              <input type="checkbox" autocomplete="off" checked>
+              <i class="fa fa-check"></i>
+            </label>
+          </td>
         </tr>
         <tr>
           <td><%=locale.t("stats:host_name")%></td>
           <td id="host_name"></td>
+          <td>
+            <button class="btn btn-success btn-circle btn-sm" onclick="toggleCheckmark(this)">
+              <i class="fa fa-check"></i>
+            </button>
+          </td>
         </tr>
         <tr>
           <td><%=locale.t("stats:uuid")%></td>
           <td id="uuid"></td>
+          <td>
+            <button class="btn btn-success btn-circle btn-sm" onclick="toggleCheckmark(this)">
+              <i class="fa fa-check"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
         </tr>
       </tbody>
     </table>
+    <div class="text-right mt-3">
+      <button class="btn btn-success px-4">
+        <i class="fa fa-power-off text-white mr-2"></i>
+        <span>Perform Action</span>
+      </button>
+    </div>
   </div>
+
+
+  <style>
+    .btn-circle input[type="checkbox"] {
+      display: none;
+    }
+  
+    .btn-circle input[type="checkbox"] + i {
+      display: inline-block;
+    }
+  
+    .btn-circle input[type="checkbox"]:not(:checked) + i {
+      display: none;
+    }
+  </style>
+
+
+  <script>
+    function toggleCheckmark(button) {
+      var checkmarkElement = button.querySelector('i');
+      checkmarkElement.classList.toggle('fa-check');
+    }
+  </script>
+
