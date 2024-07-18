@@ -1,139 +1,172 @@
 <!-- Small boxes (Stat box) -->
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-6 hide" >
-                            <!-- small box -->
-                            <div class="small-box bg-aqua animated flipInX delay-0">
-                                <div class="inner">
-                                    <h3 id="new-ae-scripts-count">
-                                        0
-                                    </h3>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-bag"></i>
-                                </div>
-                                <a href="#"  id="script_more_info" class="small-box-footer">
-                                   <%=locale.t("stats:more_info")%> <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div><!-- ./col -->
-                        <div class="col-lg-6 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-green animated flipInX delay-0">
-                                <div class="inner">
-                                    <h3>
-                                        <span id="uptime">-</span> <sup class="stats_sup">hours</sup>
-                                    </h3>
-                                    <p>
-                                       <%=locale.t("stats:up_time")%>
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-stats-bars"></i>
-                                </div>
-                                <div class="stats_div"></div>
-                                <!--
-                                <a href="#power-control" class="small-box-footer">
-                                    <%=locale.t("stats:power_cycle")%> <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            -->
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-red animated flipInX delay-0">
-                                <div class="inner">
-                                    <h3 id="new-audit-issues-count">
-                                        0
-                                    </h3>
-                                    <p>
-                                        <%=locale.t("stats:new_audit_issue")%>
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-person"></i>
-                                </div>
-                                <a href="#logs/audit-log" class="small-box-footer">
-                                    <%=locale.t("stats:more_info")%> <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div><!-- ./col -->
-                        <!--QuickButton-->
-                        <div clss="col-md-12 col-xs-12">
-                            <div id="quick-button" class="full-width-block"></div>
-                        </div>
-                        <!--ProductInformation-->
-                        <div class="col-md-6 col-xs-6">
-                            <div id="product-information-info" class="box box-info"></div>
-                        </div>
-                        <!--NetworkInformation-->
-                        <div class="col-md-6 col-xs-6">
-                            <div id="network-info" class="box box-info"></div>
-                        </div>
-                        <!--FirmwareInformation-->
-                        <div class="col-md-6 col-xs-6">
-                            <div id="firmware-information-info" class="box box-info"></div>
-                        </div>
-                        <!-- ./col -->
-                        <div id="pendingDeassertions" class="col-lg-6 col-xs-6 hide">
-                            <!-- small box -->
-                            <div class="small-box bg-yellow animated flipInX delay-0">
-                                <div class="inner">
-                                    <h3 id="asserted-events-count">
-                                        0
-                                    </h3>
-                                    <p>
-                                        <%=locale.t("stats:pending_assertions")%>
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pin"></i>
-                                </div>
-                                <a href="#logs/event-log/deasserted" class="small-box-footer">
-                                   <%=locale.t("stats:more_info")%> <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                           <!-- Small boxes (Stat box) -->
-                            <div class="row">
-                                <div class="col-md-12 col-xs-12">
-                                    <div id="quick-button" class="box box-warning">
-                                        <div class="box-header">
-                                            <h3 class="box-title"><%=locale.t("stats:quick-button_title")%></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6">
-                                    <div id="system-status-info" class="box box-info"></div>
-                                </div>
-                                <div class="col-md-6 col-xs-6">
-                                    <div id="product-information-info" class="box box-warning">
-                                        <div class="box-header">
-                                            <h3 class="box-title"><%=locale.t("stats:product-information_title")%></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6">
-                                    <div id="network-info" class="box box-warning">
-                                        <div class="box-header">
-                                            <h3 class="box-title"><%=locale.t("stats:network-info_title")%></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6">
-                                    <div id="firmware-information-info" class="box box-warning">
-                                        <div class="box-header">
-                                            <h3 class="box-title"><%=locale.t("stats:firmware-information_title")%></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- /.row -->
-                            <!--<div class="row">-->
-                                <!-- Left col -->
-                                <!--<section class="col-lg-12 left connectedSortable">-->
-                                <!--</section>--><!-- /.Left col -->
-                                <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                                <!--<section class="col-lg-12 right connectedSortable">-->
-                                <!--</section>--><!-- right col -->
-                            <!--</div>--><!-- /.row (main row) -->
-                        </div>
-                        <!-- ./col -->
-                    </div><!-- /.row -->
+<div class="row">
+    <div class="col-lg-6 col-xs-6 hide" >
+        <!-- small box -->
+        <div class="small-box bg-aqua animated flipInX delay-0">
+            <div class="inner">
+                <h3 id="new-ae-scripts-count">
+                    0
+                </h3>
+            </div>
+            <div class="icon">
+                <i class="ion ion-bag"></i>
+            </div>
+            <a href="#"  id="script_more_info" class="small-box-footer">
+               <%=locale.t("stats:more_info")%> <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><!-- ./col -->
+    <div class="col-lg-6 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green animated flipInX delay-0">
+            <div class="inner">
+                <h3>
+                    <span id="uptime">-</span> <sup class="stats_sup">hours</sup>
+                </h3>
+                <p>
+                   <%=locale.t("stats:up_time")%>
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+            </div>
+            <div class="stats_div"></div>
+            <!--
+            <a href="#power-control" class="small-box-footer">
+                <%=locale.t("stats:power_cycle")%> <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        -->
+        </div>
+    </div>
+    <div class="col-lg-6 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red animated flipInX delay-0">
+            <div class="inner">
+                <h3 id="new-audit-issues-count">
+                    0
+                </h3>
+                <p>
+                    <%=locale.t("stats:new_audit_issue")%>
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-person"></i>
+            </div>
+            <a href="#logs/audit-log" class="small-box-footer">
+                <%=locale.t("stats:more_info")%> <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><!-- ./col -->
+    <!--QuickButton3-->   
+    <!---
+    <div id="buttons" class="col-lg-12 col-xs-12">
+        <div id="button-pc" class="col-lg-6 col-xs-6">
+            <div class="small-box bg-grey animated flipInX delay-0 box box-info">
+                <div class="inner">
+                    <h2>
+                        Power Control
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div id="button-hvm" class="col-lg-6 col-xs-6">
+            <div class="small-box bg-grey animated flipInX delay-0 box box-info">
+                <div class="inner">
+                    <h2>
+                        HVM
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    
+    <!--QuickButton
+    <div clss="col-lg-6 col-xs-6">
+        <div id="button-pc" class="box box-info"></div>
+    </div>
+    <div clss="col-lg-6 col-xs-6">
+        <div id="button-hvm" class="box box-info"></div>
+    </div>-->
+
+    <div class="col-md-6 col-xs-6">
+        <div id="system-status-info" class="box box-info">
+    </div>
+    
+    <!--ProductInformation-->
+    <div class="col-md-6 col-xs-6">
+        <div id="product-information-info" class="box box-info"></div>
+    </div>
+    <!--NetworkInformation-->
+    <div class="col-md-6 col-xs-6">
+        <div id="network-info" class="box box-info"></div>
+    </div>
+    <!--FirmwareInformation-->
+    <div class="col-md-6 col-xs-6">
+        <div id="firmware-information-info" class="box box-info"></div>
+    </div>
+    <!-- ./col -->
+    <div id="pendingDeassertions" class="col-lg-6 col-xs-6 hide">
+        <!-- small box -->
+        <div class="small-box bg-yellow animated flipInX delay-0">
+            <div class="inner">
+                <h3 id="asserted-events-count">
+                    0
+                </h3>
+                <p>
+                    <%=locale.t("stats:pending_assertions")%>
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pin"></i>
+            </div>
+            <a href="#logs/event-log/deasserted" class="small-box-footer">
+               <%=locale.t("stats:more_info")%> <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+       <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div id="buttons" class="box box-warning">
+                    <div class="box-header">
+                        <h3 class="box-title"><%=locale.t("stats:buttons_title")%></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div id="system-status-info" class="box box-info"></div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div id="product-information-info" class="box box-warning">
+                    <div class="box-header">
+                        <h3 class="box-title"><%=locale.t("stats:product-information_title")%></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div id="network-info" class="box box-warning">
+                    <div class="box-header">
+                        <h3 class="box-title"><%=locale.t("stats:network-info_title")%></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div id="firmware-information-info" class="box box-warning">
+                    <div class="box-header">
+                        <h3 class="box-title"><%=locale.t("stats:firmware-information_title")%></h3>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->
+        <!--<div class="row">-->
+            <!-- Left col -->
+            <!--<section class="col-lg-12 left connectedSortable">-->
+            <!--</section>--><!-- /.Left col -->
+            <!-- right col (We are only adding the ID to make the widgets sortable)-->
+            <!--<section class="col-lg-12 right connectedSortable">-->
+            <!--</section>--><!-- right col -->
+        <!--</div>--><!-- /.row (main row) -->
+    </div>
+    <!-- ./col -->
+</div><!-- /.row -->
