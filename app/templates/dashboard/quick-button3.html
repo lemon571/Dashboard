@@ -2,8 +2,8 @@
     <h2>Quick Button</h2>
     <body>
         <div id="button-container">
-            <button id="pc" calss="button split left centered">Power Control</button>
-            <button id="hvm" calss="button split left centered">HVM</button>
+            <button id="pc" class="button split left centered one">Power Control</button>
+            <button id="hvm" class="button split left centered">KVM</button>
         </div>
         <div id="dropdown-container" class="hidden split left centered">
             <table class="table box-body">
@@ -58,47 +58,13 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="text-right mt-3">
+                <button class="btn btn-success px-4">
+                    <i class="fa fa-power-off text-white mr-2"></i>
+                    <span>Perform Action</span>
+                </button>
+            </div>
+          </div>
         </div>
     </body>
 </div>
-
-<style>
-
-    #button-container {        
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-    }
-
-    .button {
-        width: 50%;
-        height: 50px;
-        font-size: 18px;
-        background-color: white; /*#4CAF50*/
-        color: black;
-        border: none;
-        cursor: pointer;
-    }
-
-    #dropdown-container {
-        width: 50%;
-        background-color: #f1f1f1;
-        padding: 10px;
-        margin-top: 20px;
-        border: 1px solid #ddd;
-    }
-
-    #dropdown-container.hidden {
-            display: none;
-    }
-
-    .button-active{
-        background-color: #4CAF50; 
-        color: #fff;
-    }
-    
-    #dropdown-container.button-hidden {
-        display: none;
-    }
-    
-</style>
