@@ -1,0 +1,51 @@
+<div id="launch-tasks" class="launch-tasks-container">
+    <h2 class="launch-tasks-title">Quick Launch Tasks</h2>
+    <div class="launch-tasks-buttons">
+      <button id="remote-control" class="launch-tasks-button">Remote Control</button>
+      <button id="power-control" class="launch-tasks-button">Power Control</button>
+      <button id="users" class="launch-tasks-button">Users</button>
+      <button id="network" class="launch-tasks-button">Network</button>
+      <button id="system-info" class="launch-tasks-button">System Info</button>
+      <button id="fw-update" class="launch-tasks-button">FW Update</button>
+    </div>
+</div>
+
+<style>
+    .launch-tasks-container {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.launch-tasks-title {
+  margin-top: 0;
+}
+
+.launch-tasks-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.launch-tasks-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: calc(50% - 4px);
+}
+
+.launch-tasks-button:nth-child(2n+1) {
+  background-color: #28a745;
+}
+
+.launch-tasks-button:nth-child(2n) {
+  background-color: #ffc107;
+}
+
+</style>

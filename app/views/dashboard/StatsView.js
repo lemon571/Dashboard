@@ -31,7 +31,7 @@ function($, _, Backbone, app ,AppConfigModel, UserConfigModel, SystemStatusView,
             });
 
             this.acm.trigger("change", this.acm, this.acm.get('minutes_per_count'));
-    
+            
             var stat = new SystemStatusView();
             this.insertView("#system-status-info", stat).render();
 

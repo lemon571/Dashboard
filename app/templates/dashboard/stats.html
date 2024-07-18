@@ -57,38 +57,6 @@
             </a>
         </div>
     </div><!-- ./col -->
-    <!--QuickButton3-->   
-    <!---
-    <div id="buttons" class="col-lg-12 col-xs-12">
-        <div id="button-pc" class="col-lg-6 col-xs-6">
-            <div class="small-box bg-grey animated flipInX delay-0 box box-info">
-                <div class="inner">
-                    <h2>
-                        Power Control
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div id="button-hvm" class="col-lg-6 col-xs-6">
-            <div class="small-box bg-grey animated flipInX delay-0 box box-info">
-                <div class="inner">
-                    <h2>
-                        HVM
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-
-    
-    <!--QuickButton
-    <div clss="col-lg-6 col-xs-6">
-        <div id="button-pc" class="box box-info"></div>
-    </div>
-    <div clss="col-lg-6 col-xs-6">
-        <div id="button-hvm" class="box box-info"></div>
-    </div>-->
 
     <div class="col-md-6 col-xs-6">
         <div id="system-status-info" class="box box-info">
@@ -105,6 +73,10 @@
     <!--FirmwareInformation-->
     <div class="col-md-6 col-xs-6">
         <div id="firmware-information-info" class="box box-info"></div>
+    </div>
+    <!--Launch Tasks-->
+    <div class="col-md-6 col-xs-6">
+        <div id="launch-tasks" class="box box-info"></div>
     </div>
     <!-- ./col -->
     <div id="pendingDeassertions" class="col-lg-6 col-xs-6 hide">
@@ -127,13 +99,14 @@
         </div>
        <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-md-12 col-xs-12">
+            <div class="col-md-6 col-xs-6">
                 <div id="buttons" class="box box-warning">
                     <div class="box-header">
                         <h3 class="box-title"><%=locale.t("stats:buttons_title")%></h3>
                     </div>
                 </div>
             </div>
+            
             <div class="col-md-6 col-xs-6">
                 <div id="system-status-info" class="box box-info"></div>
             </div>
@@ -155,6 +128,13 @@
                 <div id="firmware-information-info" class="box box-warning">
                     <div class="box-header">
                         <h3 class="box-title"><%=locale.t("stats:firmware-information_title")%></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div id="launch-tasks class="box box-warning">
+                    <div class="box-header">
+                        <h3 class="box-title"><%=locale.t("stats:launch-tasks_title")%></h3>
                     </div>
                 </div>
             </div>
