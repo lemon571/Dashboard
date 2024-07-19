@@ -25,8 +25,11 @@ define([
       events:{
         'click #hvm': 'changeStatusHVM',
         'click #pc': 'changeStatusPC',
+        'click #pa': 'changeStatusPA',
         'click .one': 'toggleDropdown',
         'click i': 'toggleCheckmark',
+        'click .btn-circle': 'toggleCheck',
+        
        //'click table': 'hideDropdown',
       },
 
@@ -43,12 +46,54 @@ define([
       },
 
       changeStatusPC: function(){
-        this.$('#pc').addClass('button-active');
+        if (this.$('#pc').hasClass('button-active')) {
+          this.$('#pc').removeClass('button-active');
+          this.$('#pc').addClass('button-inactive');
+
+        } 
+        else {
+          this.$('#pc').removeClass('button-inactive');
+          this.$('#pc').addClass('button-active');
+       }
+      },
+
+      changeStatusPA: function(){
+        if (this.$('#pa').hasClass('button-active')) {
+          this.$('#pa').removeClass('button-active');
+        } 
+        else {
+          this.$('#pa').addClass('button-active');
+       }
       },
 
       toggleDropdown: function(){
         this.$('#dropdown-container').toggleClass('hidden');
       },
+
+      toggleCheck: function(){
+        if (this.$('.btn-circle').hasClass('btn-success')) {
+          this.$('.btn-circle').removeClass('btn-success');
+        } 
+        else {
+          this.$('.btn-circle').addClass('btn-success');
+       }
+       this.$('.fa-check').toggle();
+      },
+
+
+      /*toggleDropdown: function(){
+        this.$('#dropdown-container').toggleClass('hidden');
+      },
+
+      toggleCheck: function(){
+        if (this.$('.btn-circle').hasClass('btn-success')) {
+          this.$('.btn-circle').removeClass('btn-success');
+        } 
+        else {
+          this.$('.btn-circle').addClass('btn-success');
+       }
+        this.$('.fa-check').toggle();
+      },*/
 
       toggleCheckmark: function(event){
         //var checkbuttonIcon = this.$(button).find('i');
