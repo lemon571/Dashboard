@@ -35,10 +35,17 @@ define([
         'click #bfs':'toggleCheckBfs',
         'click #btn': "toggleCheckBtn",
         'click #bss': "toggleCheckBss",
-        'click document':'hideDropdown',
+        'click': 'hideTable',
+        //'click document':'hideDropdown',
 
         
        //'click table': 'hideDropdown',
+      },
+
+      hideTable: function(event) {
+        if(!$(event.target).closest('#dropdown-container').length && !$(event.target).hasClass('one')){
+          this.$('#dropdown-container').addClass('hidden');
+        }
       },
 
       changeStatusHVM: function(){
@@ -78,12 +85,12 @@ define([
         this.$('#dropdown-container').toggleClass('hidden');
       },
 
-      hideDropdown: function(){
+      /*hideDropdown: function(){
         if (! this.$('#dropdown-container') && ! this.$('.one')){
           this.$('#dropdown-container').toggleClass('hidden');
         }
           //table.fadeOut();
-        },
+        },*/
     
 
       //toggleCheckmark: function(){
