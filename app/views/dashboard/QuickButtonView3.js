@@ -27,8 +27,10 @@ define([
         'click #pc': 'changeStatusPC',
         'click #pa': 'changeStatusPA',
         'click .one': 'toggleDropdown',
-        'click i': 'toggleCheckmark',
-        'click .btn-circle': 'toggleCheck',
+        //'click i': 'toggleCheckmark',
+        'click .btn': 'toggleCheck',
+        'click #dropdown-container': 'hideDropdown',
+
         
        //'click table': 'hideDropdown',
       },
@@ -70,12 +72,17 @@ define([
         this.$('#dropdown-container').toggleClass('hidden');
       },
 
+      //toggleCheckmark: function(){
+        //this.$('.fa-check').toggle();
+      //},
+
       toggleCheck: function(){
         if (this.$('.btn-circle').hasClass('btn-success')) {
           this.$('.btn-circle').removeClass('btn-success');
         } 
         else {
           this.$('.btn-circle').addClass('btn-success');
+          //this.$('.fa-check').toggle();
        }
        this.$('.fa-check').toggle();
       },
@@ -95,7 +102,7 @@ define([
         this.$('.fa-check').toggle();
       },*/
 
-      toggleCheckmark: function(event){
+      /*toggleCheckmark: function(event){
         //var checkbuttonIcon = this.$(button).find('i');
         var button = this.$(event.currentTarget);
         var row = button.closest('tr');
@@ -109,14 +116,15 @@ define([
           checkIcon.addClass('fa-check');
           row.addClass('selected');
         }
-      },
+      },*/
 
       hideDropdown: function(e){
-        var block = $("table");
-        if (!block.is(e.tsrget) && block.has(e.target).length === 0) {
-          block.hide();
+        var button = this.$('.one');
+        var table = this.$('#dropdown-container');
+        if (! button.is(e.target)  && ! table.is(e.target)){
+          table.fadeOut();
         }
-      }
+      },
 
     });
   
