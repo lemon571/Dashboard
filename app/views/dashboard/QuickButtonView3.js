@@ -24,7 +24,7 @@ define([
 
       events:{
         'click #hvm': 'changeStatusHVM',
-        'click #pc': 'changeStatusPC',
+        //'click #pc': 'changeStatusPC',
         'click #pa': 'changeStatusPA',
         'click .one': 'toggleDropdown',
         //'click i': 'toggleCheckmark',
@@ -50,7 +50,7 @@ define([
        }
       },
 
-      changeStatusPC: function(){
+      /*changeStatusPC: function(){
         if (this.$('#pc').hasClass('button-active')) {
           this.$('#pc').removeClass('button-active');
           this.$('#pc').addClass('button-inactive');
@@ -60,7 +60,7 @@ define([
           this.$('#pc').removeClass('button-inactive');
           this.$('#pc').addClass('button-active');
        }
-      },
+      },*/
 
       changeStatusPA: function(){
         if (this.$('#pa').hasClass('button-active')) {

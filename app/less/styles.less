@@ -2755,6 +2755,17 @@ body{
     background-color:#b8b8b89f; 
     color: #black;
     }
+    .btn-circle input[type="checkbox"] {
+      display: none;
+    }
+  
+    .btn-circle input[type="checkbox"] + i {
+      display: inline-block;
+    }
+  
+    .btn-circle input[type="checkbox"]:not(:checked) + i {
+      display: none;
+    }
 
   //loader https://projects.lukehaas.me/css-loaders/
   .loader {
